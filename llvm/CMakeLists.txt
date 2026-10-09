@@ -568,6 +568,7 @@ set(LLVM_ALL_TARGETS
   AVR
   BPF
   DirectX
+  Gankow
   Hexagon
   Lanai
   LoongArch

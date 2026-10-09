@@ -67,6 +67,8 @@ StringRef Triple::getArchTypeName(ArchType Kind) {
     return "csky";
   case dxil:
     return "dxil";
+  case gankow:
+    return "gankow";
   case hexagon:
     return "hexagon";
   case hsail64:
@@ -467,6 +469,7 @@ Triple::ArchType Triple::getArchTypeForLLVMName(StringRef Name) {
       .Case("armeb", armeb)
       .Case("avr", avr)
       .StartsWith("bpf", BPFArch)
+      .Case("gankow", gankow)
       .Case("m68k", m68k)
       .Case("mips", mips)
       .Case("mipsel", mipsel)
@@ -621,6 +624,7 @@ Triple::ArchType Triple::parseArch(StringRef ArchName) {
           .Case("thumb", Triple::thumb)
           .Case("thumbeb", Triple::thumbeb)
           .Case("avr", Triple::avr)
+          .Case("gankow", gankow)
           .Case("m68k", Triple::m68k)
           .Case("msp430", Triple::msp430)
           .Cases({"mips", "mipseb", "mipsallegrex", "mipsisa32r6", "mipsr6"},

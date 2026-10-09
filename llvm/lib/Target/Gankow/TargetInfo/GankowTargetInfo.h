@@ -1,0 +1,12 @@
+#ifndef LLVM_LIB_TARGET_GANKOW_TARGETINFO_GANKOWTARGETINFO_H
+#define LLVM_LIB_TARGET_GANKOW_TARGETINFO_GANKOWTARGETINFO_H
+
+namespace llvm {
+
+class Target;
+
+Target &getTheGankowTarget();
+
+} // namespace llvm
+
+#endif // LLVM_LIB_TARGET_GANKOW_TARGETINFO_GANKOWTARGETINFO_H

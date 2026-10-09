@@ -102,6 +102,7 @@ public:
     amdil64,        // AMDIL with 64-bit pointers
     hsail,          // AMD HSAIL
     hsail64,        // AMD HSAIL with 64-bit pointers
+    gankow,         // Gankow
     spir,           // SPIR: standard portable IR for OpenCL 32-bit version
     spir64,         // SPIR: standard portable IR for OpenCL 64-bit version
     spirv,          // SPIR-V with logical memory layout.
@@ -1164,6 +1165,11 @@ public:
               (getOSMajorVersion() >= 13 || getOSVersion().empty())) ||
              getOS() == Triple::NetBSD || getOS() == Triple::OpenBSD ||
              isMusl()));
+  }
+
+  /// Tests whether the target is Gankow.
+  bool isGankow() const {
+    return getArch() == Triple::gankow;
   }
 
   /// Tests whether the target is 32-bit RISC-V.
